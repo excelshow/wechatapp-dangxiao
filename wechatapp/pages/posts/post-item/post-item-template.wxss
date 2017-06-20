@@ -1,0 +1,31 @@
+.post-item-container{
+  display: flex;
+  flex-direction: row;
+  height: 150rpx;
+}
+.news-img{
+  width: 230rpx;
+  height: 150rpx;
+}
+.item-content{
+  margin-left: 20rpx;
+  height: 150rpx;
+  position: relative;
+  width: 100%;
+}
+.item-content .news-title{
+  height: 100rpx;
+  font-size: 28rpx;
+  color: #353535;
+}
+.item-content .notes{
+  display:flex;
+  position: absolute;
+  bottom:0rpx;
+  width: 100%;
+  justify-content:space-between;
+}
+.item-content .notes text{
+  font-size: 22rpx;
+  color: #888888;
+}

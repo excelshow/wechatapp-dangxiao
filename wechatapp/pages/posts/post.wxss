@@ -1,0 +1,14 @@
+@import "post-list/post-list-template.wxss";
+/* pages/posts/post.wxss */
+swiper{
+
+}
+swiper-item image,swiper{
+    width:100%;
+    height:300rpx;
+}
+.posts{
+  padding: 0 20rpx;
+  border-bottom: 1rpx #b2b2b2 solid;
+  background-color: #fff;
+}

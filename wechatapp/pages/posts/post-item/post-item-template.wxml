@@ -1,0 +1,15 @@
+<template name="postItemTemplate">
+  <view class="post-item-container">
+    <view>
+    <image class="news-img" mode ="scaleToFill" src="http://n.sinaimg.cn/news/transform/20170619/pE1v-fyhfxph3168503.jpg"></image>
+    </view>
+    
+    <view class="item-content">
+      <text class="news-title">啊比哦天啊比哦天啊比哦天啊比哦天啊比哦天啊比哦天</text>
+      <view class="notes">
+        <text class="news-type">微信课堂</text>
+        <text class="news-reading">阅读 880</text>
+      </view>
+    </view>
+  </view>
+</template>

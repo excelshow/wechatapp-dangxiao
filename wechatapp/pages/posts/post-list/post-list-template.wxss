@@ -1,0 +1,5 @@
+@import "../post-item/post-item-template.wxss";
+.single-view-container{
+  padding: 20rpx 0;
+  border-top: 1rpx #b2b2b2 solid; 
+}

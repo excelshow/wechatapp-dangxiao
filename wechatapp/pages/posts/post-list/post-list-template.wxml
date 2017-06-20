@@ -1,0 +1,14 @@
+<import src="../post-item/post-item-template"/>
+<template name="postListTemplate">
+  <view class="post-list-container">
+    <view class="single-view-container">
+      <template is="postItemTemplate"></template>
+    </view>
+    <view class="single-view-container">
+      <template is="postItemTemplate"></template>
+    </view>
+    <view class="single-view-container">
+      <template is="postItemTemplate"></template>
+    </view>
+  </view>
+</template>
