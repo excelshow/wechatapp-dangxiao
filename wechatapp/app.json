@@ -5,12 +5,12 @@
   "window":{
     "backgroundTextStyle":"light",
     "backgroundColor": "#eeeeee",
-    "navigationBarBackgroundColor": "#e64340",
+    "navigationBarBackgroundColor": "#cb1c1d",
     "navigationBarTitleText": "柏乡党校",
     "navigationBarTextStyle":"#fff"
   },
   "tabBar": {
-    "selectedColor": "#e64340",
+    "selectedColor": "#cb1c1d",
     "list": [
       {
         "pagePath": "pages/posts/post",
