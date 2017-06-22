@@ -1,10 +1,12 @@
 {
   "pages":[
+    "pages/my/my",
     "pages/posts/post"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "backgroundColor": "#eeeeee",
+    "backgroundColor": "#f8f8f8",
     "navigationBarBackgroundColor": "#cb1c1d",
     "navigationBarTitleText": "柏乡党校",
     "navigationBarTextStyle":"#fff"
@@ -31,7 +33,7 @@
         "selectedIconPath": "images/tab/liuyan-selected.png"
       },
       {
-        "pagePath": "pages/movies/movisses",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "images/tab/my.png",
         "selectedIconPath": "images/tab/my-selected.png"
