@@ -1,8 +1,9 @@
 {
   "pages":[
-    "pages/my/my",
-    "pages/posts/post"
     
+    "pages/posts/post",
+    "pages/my/my",
+    "pages/about/about"
   ],
   "window":{
     "backgroundTextStyle":"light",
