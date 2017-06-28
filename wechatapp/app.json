@@ -1,7 +1,7 @@
 {
   "pages":[
     
-    "pages/posts/post",
+    "pages/home/home",
     "pages/my/my",
     "pages/about/about"
   ],
@@ -16,7 +16,7 @@
     "selectedColor": "#cb1c1d",
     "list": [
       {
-        "pagePath": "pages/posts/post",
+        "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "images/tab/dang.png",
         "selectedIconPath": "images/tab/dang-selected.png"

@@ -1,10 +1,10 @@
-<import src="post-list/post-list-template"/>
+<import src="../tpls/post-list/post-list-template"/>
 <!--pages/posts/post.wxml-->
 <view>
   <swiper indicator-dots="{{false}}" autoplay="true" interval="5000" duration="1000">
-    <block wx:for="{{bannerImgUrls}}">
+    <block wx:for="{{bannerArr}}">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" mode="aspectFill" />
+        <image src="{{item.img.url}}" class="slide-image" mode="aspectFill" />
       </swiper-item>
     </block>
   </swiper>

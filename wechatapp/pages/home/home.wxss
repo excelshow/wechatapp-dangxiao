@@ -1,4 +1,4 @@
-@import "post-list/post-list-template.wxss";
+@import "../tpls/post-list/post-list-template.wxss";
 /* pages/posts/post.wxss */
 swiper{
 
