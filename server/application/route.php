@@ -13,4 +13,6 @@ use think\Route;
 
 Route::get("api/:version/banner/:id","api/:version.Banner/getBanner");
 
+Route::get("api/:version/newslist","api/:version.News/getNewsList");
+
 Route::post("api/:version/token/user","api/:version.Token/getToken");
