@@ -1,8 +1,8 @@
 <import src="list-grid/list-grid-template.wxml"/>
 <view class="my-container">
   <view class="user">
-    <image class="user-img" src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3803512966,1757656304&fm=58" mode="aspectFill"></image>
-    <text class="user-name">我是习近平</text>
+    <image class="user-img" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+    <text class="user-name">{{userInfo.nickName}}</text>
   </view>
   <block wx:for="{{listgrids}}" wx:for-item="listgrid">
     <template is="listGridTemplate" data="{{listgrid}}"></template>

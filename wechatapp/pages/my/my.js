@@ -14,6 +14,7 @@ Page({
    */
   onLoad: function (options) {
     this._loadData();
+    this._login();
   },
 
   _loadData:function(){
@@ -28,5 +29,25 @@ Page({
     wx.redirectTo({
       url: page
     })
+  },
+
+  _login:function(){
+    wx.login({
+      success: (res) => {
+        var code = res.code;
+        if (code) {
+          wx.getUserInfo({
+            success: (res) => {
+              var userInfo = res.userInfo;
+              this.setData({
+                userInfo: userInfo
+              });
+            }
+          });
+        } else {
+           console.log('获取用户登录态失败！' + res.errMsg);
+        }
+      }
+    });
   }
 })

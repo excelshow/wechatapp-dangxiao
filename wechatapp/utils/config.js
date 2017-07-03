@@ -1,10 +1,8 @@
 class Config{
-
-  constructor() {
-    
+  constructor() { 
   }
-
 }
-Config.restUrl = "http://localhost:3000/api/v1/";
+
+Config.restUrl = "http://127.0.0.1:3000/api/v1/";
 
 export { Config };
