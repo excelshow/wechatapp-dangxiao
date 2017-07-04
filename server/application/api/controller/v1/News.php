@@ -13,7 +13,12 @@ class News extends BaseController
 {
     public function getNewsList($page=1,$size=15){
       (new PagingParameter())->goCheck();
-      $newslist = NewsModel::getNewsList($page,$size);
-      return $newslist;
+      $result = NewsModel::getNewsList($page,$size);
+      return $result;
+    }
+    public function getNewsById($id){
+      (new IDMustBePostiveInt())->goCheck();
+      $result = NewsModel::getNewsById($id);
+      return $result;
     }
 }

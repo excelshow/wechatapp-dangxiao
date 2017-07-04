@@ -16,6 +16,18 @@ class Home extends Base{
     this.request(params);
   }
 
+  getNewsList(callback) {
+    var page = 1;
+    var size = 3;
+    var params = {
+      "url": "news/list?page=" + page + "&size=" + size,
+      "sCallback": function (data) {
+        callback && callback(data.data);
+      }
+    }
+    this.request(params);
+  }
+
 }
 
 export {Home}

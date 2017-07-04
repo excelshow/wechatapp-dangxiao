@@ -1,14 +1,14 @@
 <template name="postItemTemplate">
-  <view class="post-item-container">
+  <view class="post-item-container" catchtap="onNewsTap" data-id="{{news.id}}">
     <view>
-    <image class="news-img" mode ="scaleToFill" src="http://n.sinaimg.cn/news/transform/20170619/pE1v-fyhfxph3168503.jpg"></image>
+    <image class="news-img" mode ="scaleToFill" src="{{news.topic_img.url}}"></image>
     </view>
     
     <view class="item-content">
-      <text class="news-title">啊比哦天啊比哦天啊比哦天啊比哦天啊比哦天啊比哦天</text>
+      <text class="news-title">{{news.title}}</text>
       <view class="notes">
-        <text class="news-type">微信课堂</text>
-        <text class="news-reading">阅读 880</text>
+        <text class="news-type">{{news.category.name}}</text>
+        <text class="news-reading">阅读 {{news.reading}}</text>
       </view>
     </view>
   </view>

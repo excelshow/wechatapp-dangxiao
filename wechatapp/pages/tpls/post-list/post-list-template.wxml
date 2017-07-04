@@ -1,14 +1,13 @@
 <import src="../post-item/post-item-template"/>
 <template name="postListTemplate">
   <view class="post-list-container">
-    <view class="single-view-container">
-      <template is="postItemTemplate"></template>
-    </view>
-    <view class="single-view-container">
-      <template is="postItemTemplate"></template>
-    </view>
-    <view class="single-view-container">
-      <template is="postItemTemplate"></template>
-    </view>
+    <block wx:for="{{NewsListArr}}" wx:key="item"> 
+      <view wx:if="{{index == 0}}" class="single-view-container" style="border-top:0">
+        <template is="postItemTemplate" data="{{news: item}}"></template>
+      </view>
+      <view wx:else class="single-view-container">
+        <template is="postItemTemplate" data="{{news: item}}"></template>
+      </view>
+    </block>
   </view>
 </template>

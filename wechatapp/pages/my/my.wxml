@@ -4,7 +4,7 @@
     <image class="user-img" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
     <text class="user-name">{{userInfo.nickName}}</text>
   </view>
-  <block wx:for="{{listgrids}}" wx:for-item="listgrid">
+  <block wx:for="{{listgrids}}" wx:key="item" wx:for-item="listgrid">
     <template is="listGridTemplate" data="{{listgrid}}"></template>
   </block>
   

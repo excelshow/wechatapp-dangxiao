@@ -2,7 +2,7 @@
 <template name="listGridTemplate">
     <view class="weui-cells__title">{{cells__title}}</view>
     <view class="weui-cells weui-cells_after-title">
-    <block wx:for="{{listgrid.navigators}}" wx:for-item="navigator">
+    <block wx:for="{{listgrid.navigators}}" wx:key="item" wx:for-item="navigator">
       <template is="listNavigatorTemplate" data="{{...navigator}}"></template>
     </block>
     </view> 

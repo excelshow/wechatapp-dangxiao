@@ -26,7 +26,10 @@ class Base{
       complete: function(res) {},
     })
   }
-
+  // 获取元素上的绑定的值
+  getDataSet(event, key) {
+    return event.currentTarget.dataset[key];
+  }
 }
 
 export { Base };

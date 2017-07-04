@@ -8,7 +8,10 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class="posts">
-    <template is="postListTemplate"></template>
+  <view class="main">
+    <view class="posts">
+      <template is="postListTemplate" data="{{NewsListArr : NewsListArr}}"></template>
+    </view>
   </view>
+
 </view>

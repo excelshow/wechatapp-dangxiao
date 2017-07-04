@@ -6,9 +6,26 @@ use app\api\model\BaseModel;
 
 class News extends BaseModel
 {
+    protected $hidden = ['topic_img_id'];
+    public function topicImg(){
+      return $this->belongsTo('Image','topic_img_id','id');
+    }
+    public function category(){
+      return $this->belongsTo('Category','category_id','id');
+    }
+    public function NewsContent(){
+      return $this->hasOne('NewsContent','news_id','id');
+    }
     public static function getNewsList($page,$size){
-      $pagingData = self::order("create_time desc")
+      $pagingData = self::where("status","=",1)
+        ->with(['topicImg','category'])
+        ->order("create_time desc")
         ->paginate($size ,true ,['page' => $page]);
       return $pagingData;
+    }
+    public static function getNewsById($id){
+      $result = self::with(['NewsContent'])
+        ->find($id);
+      return $result;
     }
 }

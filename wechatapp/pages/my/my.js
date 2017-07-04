@@ -26,7 +26,7 @@ Page({
   },
 
   onListTap: function (page) {
-    wx.redirectTo({
+    wx.navigateTo({
       url: page
     })
   },

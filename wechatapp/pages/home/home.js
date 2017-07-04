@@ -22,7 +22,18 @@ Page({
         bannerArr:data
       });
     });
+    home.getNewsList((data)=>{
+      this.setData({
+        NewsListArr: data
+      });
+    });
 
+  },
+  onNewsTap:function(event){
+    var id = home.getDataSet(event,"id");
+    wx.navigateTo({
+      url: "/pages/news/news-detail/news-detail?id=" + id
+    })
   }
 
 
