@@ -1,4 +1,6 @@
-// pages/news/news-detail/news-detail.js
+import { News } from "../news-model.js";
+var news = new News;
+
 Page({
 
   /**
@@ -12,55 +14,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.data.id = options.id;
+    this.data.title = options.title;
+    this._loadData();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
-  
-  },
+    wx.setNavigationBarTitle({
+      title: this.data.title
+    });
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  _loadData: function () {
+    news.getNewsById(this.data.id,(data)=>{
+      console.log(data);
+    });
   }
 })

@@ -13,7 +13,7 @@ class News extends BaseModel
     public function category(){
       return $this->belongsTo('Category','category_id','id');
     }
-    public function NewsContent(){
+    public function newsContent(){
       return $this->hasOne('NewsContent','news_id','id');
     }
     public static function getNewsList($page,$size){
@@ -24,7 +24,7 @@ class News extends BaseModel
       return $pagingData;
     }
     public static function getNewsById($id){
-      $result = self::with(['NewsContent'])
+      $result = self::with(['newsContent'])
         ->find($id);
       return $result;
     }

@@ -19,6 +19,9 @@ class News extends BaseController
     public function getNewsById($id){
       (new IDMustBePostiveInt())->goCheck();
       $result = NewsModel::getNewsById($id);
+      if (!$result) {
+        throw new NewsException();
+      }
       return $result;
     }
 }
