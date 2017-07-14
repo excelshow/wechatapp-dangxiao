@@ -7,6 +7,9 @@ class News extends Base {
   }
 
   getNewsById(id,callback) {
+    wx.showLoading({
+      title: '加载中',
+    })
     var params = {
       "url": "news/" + id,
       "sCallback": function (data) {

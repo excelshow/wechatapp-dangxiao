@@ -4,7 +4,8 @@
     "pages/home/home",
     "pages/my/my",
     "pages/about/about",
-    "pages/news/news-detail/news-detail"
+    "pages/news/news-detail/news-detail",
+    "pages/user/user"
   ],
   "window":{
     "backgroundTextStyle":"light",

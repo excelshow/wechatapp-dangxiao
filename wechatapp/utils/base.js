@@ -23,7 +23,9 @@ class Base{
       fail: function(err) {
         console.log(err);
       },
-      complete: function(res) {},
+      complete: function(res) {
+        wx.hideLoading();
+      }
     })
   }
   // 获取元素上的绑定的值

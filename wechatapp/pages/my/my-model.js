@@ -14,7 +14,7 @@ class My extends Base{
           "icon": "/images/icon/businessman.png",
           "cell__bd": "个人信息",
           "cell__ft": "修改资料",
-          "page": ""
+          "page": "/pages/user/user"
         }]
       },
       {

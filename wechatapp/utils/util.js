@@ -10,6 +10,7 @@ function http(url, callBack, data, method) {
     fail: function (res) {
     },
     complete: function (res) {
+      
     }
   })
 }
