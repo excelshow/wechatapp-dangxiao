@@ -17,6 +17,3 @@
 
 </view>
 
-
-<import src="../../img-loader/img-loader.wxml"/>
-<template is="img-loader" data="{{ imgLoadList }}"></template>

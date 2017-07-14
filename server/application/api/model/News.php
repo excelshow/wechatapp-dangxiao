@@ -25,6 +25,7 @@ class News extends BaseModel
     }
     public static function getNewsById($id){
       $result = self::with(['newsContent'])
+        ->with(['category'])
         ->find($id);
       return $result;
     }

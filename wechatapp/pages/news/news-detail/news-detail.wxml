@@ -1,2 +1,16 @@
-<!--pages/news/news-detail/news-detail.wxml-->
-<text>pages/news/news-detail/news-detail.wxml</text>
+<import src="../../../libs/wxParse/wxParse.wxml" />
+<view class="page" style='  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", ΢���ź�, STHeiti, ����ϸ��, sans-serif;'>
+
+  <view class="weui-article">
+
+    <view class="page__title">{{news.title}}</view>
+    <view class="page__desc">{{news.category.name}} <span style="float:right;">{{news.create_time}}</span></view>
+    <view class="weui-article__section" style="margin-top:20rpx;">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <view class="weui-loadmore" wx:if="{{!news}}">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+  </view>
+</view>

@@ -1,3 +1,5 @@
+var WxParse = require('../../../libs/wxParse/wxParse.js');
+
 import { News } from "../news-model.js";
 var news = new News;
 
@@ -7,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    
   },
 
   /**
@@ -26,7 +28,11 @@ Page({
   },
   _loadData: function () {
     news.getNewsById(this.data.id,(data)=>{
-      console.log(data);
+      this.setData({
+        news: data
+      });
+      var article = this.data.news.news_content.content;
+      WxParse.wxParse('article', 'html', article, this, 0);
     });
   }
 })
