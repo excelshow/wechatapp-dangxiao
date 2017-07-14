@@ -1,7 +1,7 @@
 <template name="postItemTemplate">
   <view class="post-item-container" catchtap="onNewsTap" data-id="{{news.id}}" data-title="{{news.title}}">
     <view>
-    <image class="news-img" mode ="scaleToFill" src="{{news.topic_img.url}}"></image>
+    <image class="news-img load_img"  mode ="scaleToFill" src="{{news.topic_img.url}}"></image>
     </view>
     
     <view class="item-content">

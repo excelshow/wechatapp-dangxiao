@@ -22,6 +22,8 @@ class News extends BaseController
       if (!$result) {
         throw new NewsException();
       }
+      NewsModel::where("id","=",$id)
+        ->setInc("reading",1);
       return $result;
     }
 }

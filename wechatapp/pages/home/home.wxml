@@ -4,14 +4,19 @@
   <swiper indicator-dots="{{false}}" autoplay="true" interval="5000" duration="1000">
     <block wx:for="{{bannerArr}}" wx:key="item">
       <swiper-item>
-        <image src="{{item.img.url}}" class="slide-image" mode="aspectFill" />
+        <image src="{{item.img.url}}" class="slide-image load_img" mode="aspectFill" />
       </swiper-item>
     </block>
   </swiper>
   <view class="main">
     <view class="posts">
-      <template is="postListTemplate" data="{{NewsListArr : NewsListArr}}"></template>
+      <template is="postListTemplate" data="{{NewsListArr : NewsListArr,cells__title:'最新发布'}}"></template>
+      <template is="postListTemplate" data="{{NewsListArr : NewsListArr,cells__title:'柏乡党性教育微信课堂'}}"></template>
     </view>
   </view>
 
 </view>
+
+
+<import src="../../img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

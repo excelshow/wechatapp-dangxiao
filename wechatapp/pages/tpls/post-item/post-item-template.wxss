@@ -1,3 +1,4 @@
+
 .post-item-container{
   display: flex;
   flex-direction: row;
@@ -14,9 +15,14 @@
   width: 100%;
 }
 .item-content .news-title{
-  height: 100rpx;
+  height: 90rpx;
   font-size: 28rpx;
   color: #353535;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
 }
 .item-content .notes{
   display:flex;

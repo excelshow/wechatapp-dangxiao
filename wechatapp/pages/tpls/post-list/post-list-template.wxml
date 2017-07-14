@@ -1,13 +1,12 @@
 <import src="../post-item/post-item-template"/>
 <template name="postListTemplate">
-  <view class="post-list-container">
+  <view class="weui-cells__title">{{cells__title}}</view>
+  <view class="post-list-container weui-cells weui-cells_after-title">
     <block wx:for="{{NewsListArr}}" wx:key="item"> 
-      <view wx:if="{{index == 0}}" class="single-view-container" style="border-top:0">
+      <view class="single-view-container weui-cell weui-cell_access"  hover-class="weui-cell_active">
         <template is="postItemTemplate" data="{{news: item}}"></template>
       </view>
-      <view wx:else class="single-view-container">
-        <template is="postItemTemplate" data="{{news: item}}"></template>
-      </view>
+      <view class="classname"></view>
     </block>
   </view>
 </template>
