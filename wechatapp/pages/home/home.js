@@ -17,21 +17,24 @@ Page({
   onLoad: function (options) {
     this._loadData();
   },
-  _loadData: function (){
-    home.getBannerData((data)=>{
+  onPullDownRefresh: function () {
+    this._loadData();
+  },
+  _loadData: function () {
+    home.getBannerData((data) => {
       this.setData({
-        bannerArr:data
+        bannerArr: data
       });
     });
-    home.getNewsList((data)=>{
+    home.getNewsList((data) => {
       this.setData({
         NewsListArr: data
       });
+      wx.stopPullDownRefresh();
     });
-
   },
-  onNewsTap:function(event){
-    var id = home.getDataSet(event,"id");
+  onNewsTap: function (event) {
+    var id = home.getDataSet(event, "id");
     var title = home.getDataSet(event, "title");
     wx.navigateTo({
       url: "/pages/news/news-detail/news-detail?id=" + id + "&title=" + title

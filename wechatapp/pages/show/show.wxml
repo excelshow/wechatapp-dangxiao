@@ -1,0 +1,16 @@
+<view class="container show-container">
+
+
+  <view class="show-item">
+    <view class="show-item-badge-box">
+      <view class="show-item-badge"></view>
+    </view>
+    <image class="show-item-img" mode="aspectFill" src="http://img.jizhongzhi.com/17-7-15/59011963.jpg"></image>
+    <view class="show-item-text">
+      <text>邢台印象</text>
+      <view class="text">
+      </view>
+    </view>
+  </view>
+
+</view>

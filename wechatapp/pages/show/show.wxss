@@ -1,0 +1,53 @@
+.show-container{
+  padding: 0 20rpx;
+}
+.show-item-badge-box{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  border-radius:15rpx;
+  box-shadow: 2rpx 5rpx 10rpx #ccc;
+  height: 280rpx;
+}
+.show-item{
+  padding: 20rpx 0;
+  position: relative;
+  height: 260rpx;
+  width: 100%; 
+  
+}
+.show-item-img{
+  position: absolute;
+  border-radius:15rpx;
+  height: 280rpx;
+  width: 100%;
+  
+}
+.show-item-badge{
+  height: 260rpx;
+  border: 10rpx solid #cb1c1d;
+  border-radius:15rpx;
+  
+  box-shadow:0rpx 3rpx 10rpx #000 inset; 
+}
+.show-item-text{
+  position: absolute;
+  bottom: 0rpx;
+  width: 100%;
+  
+}
+.show-item-text .text{
+  padding: 0 10rpx 10rpx 10rpx;
+  background-color: #000;
+  opacity: 0.5;
+  border-radius:0 0 15rpx 15rpx;
+  color: #fff;
+  height: 50rpx;
+}
+.show-item-text text{
+  z-index: 2;
+  position: absolute;
+  color: #fff;
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}

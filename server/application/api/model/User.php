@@ -14,4 +14,10 @@ class User extends BaseModel
         ->find();
       return $user;
     }
+    public static function getUserinfo($uid){
+      $user = self::where("id","=",$uid)
+        ->with(['address'])
+        ->find();
+      return $user;
+    }
 }

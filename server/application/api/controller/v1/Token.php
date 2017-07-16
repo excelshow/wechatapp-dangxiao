@@ -9,7 +9,6 @@ use app\api\service\UserToken;
 class Token extends Controller
 {
     public function getToken($code = ""){
-      return $code;
       (new TokenGet())->goCheck();
       $ut = new UserToken($code);
       $token = $ut->get();

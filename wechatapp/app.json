@@ -5,7 +5,8 @@
     "pages/my/my",
     "pages/about/about",
     "pages/news/news-detail/news-detail",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/show/show"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -24,7 +25,7 @@
         "selectedIconPath": "images/tab/dang-selected.png"
       },
       {
-        "pagePath": "pages/movies/movies",
+        "pagePath": "pages/show/show",
         "text": "活动",
         "iconPath": "images/tab/hot.png",
         "selectedIconPath": "images/tab/hot-selected.png"
