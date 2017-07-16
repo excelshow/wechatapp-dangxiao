@@ -17,5 +17,6 @@ Route::get("api/:version/news/list","api/:version.News/getNewsList");
 Route::get("api/:version/news/:id","api/:version.News/getNewsById");
 
 Route::get("api/:version/user/userinfo","api/:version.User/getUserinfo");
+Route::post("api/:version/address","api/:version.Address/createOrUpdateAddress");
 
 Route::post("api/:version/token/user","api/:version.Token/getToken");

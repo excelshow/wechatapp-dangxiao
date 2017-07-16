@@ -6,7 +6,7 @@
   z-index: 2;
   width: 100%;
   border-radius:15rpx;
-  box-shadow: 2rpx 5rpx 10rpx #ccc;
+  box-shadow: 0rpx 0rpx 10rpx #aaa;
   height: 280rpx;
 }
 .show-item{
@@ -28,7 +28,7 @@
   border: 10rpx solid #cb1c1d;
   border-radius:15rpx;
   
-  box-shadow:0rpx 3rpx 10rpx #000 inset; 
+  box-shadow:0rpx 0rpx 10rpx #333 inset; 
 }
 .show-item-text{
   position: absolute;
