@@ -22,3 +22,6 @@
     <button formType="submit" style="background-color:#cb1c1d;" class="weui-btn" type="primary">保存</button>
   </view>
 </form>
+  <loading hidden="{{loadingHidden}}">
+    加载中...
+  </loading>

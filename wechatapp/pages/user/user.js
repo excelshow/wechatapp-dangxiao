@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    loadingHidden: false,
     userinfo:''
   },
   onLoad: function(){
@@ -14,7 +15,8 @@ Page({
   _loadData: function(){
     user.getUserinfo((data)=>{
       this.setData({
-        userinfo: data
+        userinfo: data,
+        loadingHidden: true
       });
     });
   },

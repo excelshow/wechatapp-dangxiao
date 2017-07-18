@@ -6,6 +6,21 @@ class My extends Base{
     super();
   }
 
+  getUserInfo(callback) {
+    this.login((code)=>{
+      if (code){
+        wx.getUserInfo({
+          success: (res) => {
+            var userInfo = res.userInfo;
+            callback && callback(userInfo);
+          }
+        });
+      }else{
+        console.log("登录失败");
+      }
+    })
+  }
+
   getListgrids(callback) {
     var data = [
       {

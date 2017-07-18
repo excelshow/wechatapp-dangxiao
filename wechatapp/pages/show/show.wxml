@@ -10,5 +10,7 @@
       <view class="title">{{item.title}}</view>
     </view>
   </block>
-
+  <loading hidden="{{loadingHidden}}">
+    加载中...
+  </loading>
 </view>

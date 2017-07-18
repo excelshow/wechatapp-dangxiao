@@ -18,12 +18,18 @@ class Base{
       method: params.type || "GET",
       dataType: '',
       success: function(res) {
-        params.sCallback && params.sCallback(res.data);
+        console.log(res);
+        var error_code = res.data.error_code;
+        if (!error_code){
+          params.sCallback && params.sCallback(res.data);
+        }
+        
       },
       fail: function(err) {
         console.log(err);
       },
       complete: function(res) {
+        console.log(res.data);
         wx.hideLoading();
       }
     })
@@ -31,6 +37,15 @@ class Base{
   // 获取元素上的绑定的值
   getDataSet(event, key) {
     return event.currentTarget.dataset[key];
+  }
+
+  login(callback) {
+    wx.login({
+      success: (res) => {
+        var code = res.code;
+        callback && callback(code);
+      }
+    });
   }
 }
 

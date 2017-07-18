@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    loadingHidden:false
   },
 
   /**
@@ -23,7 +23,8 @@ Page({
   _loadData: function () {
     show.getBannerData((data) => {
       this.setData({
-        bannerArr: data
+        bannerArr: data,
+        loadingHidden:true
       });
     });
   },
