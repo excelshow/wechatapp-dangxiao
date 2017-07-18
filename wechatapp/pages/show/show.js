@@ -1,3 +1,6 @@
+
+import { Show } from "show-model.js";
+var show = new Show;
 // pages/show/show.js
 Page({
 
@@ -12,55 +15,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this._loadData();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
-  
+    this._loadData();
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
+  _loadData: function () {
+    show.getBannerData((data) => {
+      this.setData({
+        bannerArr: data
+      });
+    });
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  onBannerTap: function (event) {
+    var type = show.getDataSet(event, "type");
+    var key_word = show.getDataSet(event, "key_word");
+    console.log(type);
+    console.log(type);
   }
 })

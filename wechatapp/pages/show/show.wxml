@@ -1,28 +1,14 @@
 <view class="container show-container">
 
-  <view class="show-item">
-    <view class="show-item-badge-box">
-      <view class="show-item-badge"></view>
-    </view>
-    <image class="show-item-img" mode="aspectFill" 
-    src="http://img.jizhongzhi.com/17-7-16/87886161.jpg">
-    </image>
-    <view class="show-item-text">
-      <text>柏乡党校党性教育微信课堂</text>
-      <view class="text">
+  <block wx:for="{{bannerArr}}" wx:key="item">
+    <view class="show-item" data-type="{{item.type}}" data-key_word="{{item.key_word}}" bindtap="onBannerTap">
+      <view class="border-box"></view>
+      <image mode="aspectFill" src="{{item.img.url}}">
+      </image>
+      <view class="show-item-text">
       </view>
+      <view class="title">{{item.title}}</view>
     </view>
-  </view>
-  <view class="show-item">
-    <view class="show-item-badge-box">
-      <view class="show-item-badge"></view>
-    </view>
-    <image class="show-item-img" mode="aspectFill" src="http://img.jizhongzhi.com/17-7-15/59011963.jpg"></image>
-    <view class="show-item-text">
-      <text>邢台印象</text>
-      <view class="text">
-      </view>
-    </view>
-  </view>
+  </block>
 
 </view>
