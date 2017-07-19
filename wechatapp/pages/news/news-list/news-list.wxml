@@ -1,0 +1,17 @@
+<import src="../../tpls/post-list/post-list-template" />
+
+<view class="container news-list-container">
+  <view class="main">
+    <view class="posts">
+      <template is="postListTemplate" data="{{NewsListArr : NewsListArr}}"></template>
+    </view>
+  </view>
+
+  <view class="weui-loadmore" hidden="{{lodingHidden}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips"></view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line" hidden="{{fullHidden}}">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line" style="background-color:#F8F8F8">已加载全部</view>
+  </view>
+</view>

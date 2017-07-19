@@ -1,7 +1,7 @@
 <view class="container show-container">
 
   <block wx:for="{{bannerArr}}" wx:key="item">
-    <view class="show-item" data-type="{{item.type}}" data-key_word="{{item.key_word}}" bindtap="onBannerTap">
+    <view class="show-item" data-type="{{item.type}}" data-title="{{item.title}}" data-key_word="{{item.key_word}}" bindtap="onBannerTap">
       <view class="border-box"></view>
       <image mode="aspectFill" src="{{item.img.url}}">
       </image>
@@ -10,7 +10,4 @@
       <view class="title">{{item.title}}</view>
     </view>
   </block>
-  <loading hidden="{{loadingHidden}}">
-    加载中...
-  </loading>
 </view>

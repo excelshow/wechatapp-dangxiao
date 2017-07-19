@@ -9,4 +9,12 @@
       <template is="wxParse" data="{{wxParseData:article.nodes}}" />
     </view>
   </view>
+
+</view>
+
+<view class="menu">
+  <view class="menu_item" bindtap="onBackTap">
+    <view class="shadeDiv"></view>
+    <image src="/images/icon/back.png"></image>
+  </view>
 </view>

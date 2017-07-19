@@ -5,6 +5,7 @@
     "pages/my/my",
     "pages/about/about",
     "pages/news/news-detail/news-detail",
+    "pages/news/news-list/news-list",
     "pages/user/user",
     "pages/show/show"
   ],

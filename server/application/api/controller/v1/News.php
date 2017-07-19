@@ -11,9 +11,9 @@ use app\lib\exception\NewsException;
 
 class News extends BaseController
 {
-    public function getNewsList($page=1,$size=15){
+    public function getNewsList($page=1,$size=15,$id=null){
       (new PagingParameter())->goCheck();
-      $result = NewsModel::getNewsList($page,$size);
+      $result = NewsModel::getNewsList($page,$size,$id);
       return $result;
     }
     public function getNewsById($id){

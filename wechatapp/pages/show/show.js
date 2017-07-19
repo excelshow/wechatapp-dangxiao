@@ -8,7 +8,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    loadingHidden:false
   },
 
   /**
@@ -21,17 +20,22 @@ Page({
     this._loadData();
   },
   _loadData: function () {
+    wx.showLoading({
+      title: '加载中',
+    })
     show.getBannerData((data) => {
       this.setData({
-        bannerArr: data,
-        loadingHidden:true
+        bannerArr: data
       });
     });
   },
   onBannerTap: function (event) {
     var type = show.getDataSet(event, "type");
     var key_word = show.getDataSet(event, "key_word");
-    console.log(type);
-    console.log(type);
+    var title = show.getDataSet(event, "title");
+    var url = show.getBannerUrl(type, key_word, title);
+    wx.navigateTo({
+      url: url
+    })
   }
 })

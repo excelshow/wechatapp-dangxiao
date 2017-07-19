@@ -24,7 +24,9 @@ Page({
     wx.setNavigationBarTitle({
       title: this.data.title
     });
-
+  },
+  onBackTap:function(){
+    wx.navigateBack();
   },
   _loadData: function () {
     news.getNewsById(this.data.id,(data)=>{

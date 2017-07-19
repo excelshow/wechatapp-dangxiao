@@ -11,7 +11,7 @@
   <view class="main">
     <view class="posts">
       <template is="postListTemplate" data="{{NewsListArr : NewsListArr,cells__title:'最新发布'}}"></template>
-      <template is="postListTemplate" data="{{NewsListArr : NewsListArr,cells__title:'柏乡党性教育微信课堂'}}"></template>
+      <template is="postListTemplate" data="{{NewsListArr : NewsListArr,cells__title:'柏乡党校微信课堂'}}"></template>
     </view>
   </view>
 

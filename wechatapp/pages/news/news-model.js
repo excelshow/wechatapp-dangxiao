@@ -19,6 +19,17 @@ class News extends Base {
     this.request(params);
   }
 
+  getNewsList(data, callback) {
+    var params = {
+      "url": "news/list",
+      "data": data,
+      "sCallback": function (res) {
+        callback && callback(res.data, res.current_page);
+      }
+    }
+    this.request(params);
+  }
+
 }
 
 export { News }

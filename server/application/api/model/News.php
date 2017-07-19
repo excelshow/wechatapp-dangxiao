@@ -16,10 +16,14 @@ class News extends BaseModel
     public function newsContent(){
       return $this->hasOne('NewsContent','news_id','id');
     }
-    public static function getNewsList($page,$size){
-      $pagingData = self::where("status","=",1)
+    public static function getNewsList($page,$size,$id){
+      if ($id) {
+        $where['category_id'] = $id;
+      }
+      $where['status'] = 1;
+      $pagingData = self::where($where)
         ->with(['topicImg','category'])
-        ->order("create_time desc")
+        ->order("id desc")
         ->paginate($size ,true ,['page' => $page]);
       return $pagingData;
     }

@@ -8,7 +8,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
   },
 
   /**
@@ -26,7 +25,7 @@ Page({
         bannerArr: data
       });
     });
-    home.getNewsList((data) => {
+    home.getNewsList({id:1,page:1,size:3},(data) => {
       this.setData({
         NewsListArr: data
       });

@@ -7,18 +7,21 @@ class My extends Base{
   }
 
   getUserInfo(callback) {
-    this.login((code)=>{
-      if (code){
-        wx.getUserInfo({
-          success: (res) => {
-            var userInfo = res.userInfo;
-            callback && callback(userInfo);
-          }
-        });
-      }else{
-        console.log("登录失败");
+    wx.login({
+      success: (res) => {
+        var code = res.code;
+        if (code) {
+          wx.getUserInfo({
+            success: (res) => {
+              var userInfo = res.userInfo;
+              callback && callback(userInfo);
+            }
+          });
+        } else {
+          console.log("登录失败");
+        }
       }
-    })
+    });
   }
 
   getListgrids(callback) {
