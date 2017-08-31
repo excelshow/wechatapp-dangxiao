@@ -1,8 +1,8 @@
 class Config{
-  constructor() { 
+  constructor() {
   }
 }
 
-Config.restUrl = "http://z.cn/api/v1/";
+Config.restUrl = "http://wx.dangxiao.cn/api/v1/";
 
 export { Config };
