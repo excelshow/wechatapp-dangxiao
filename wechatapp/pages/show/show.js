@@ -34,6 +34,7 @@ Page({
     var key_word = show.getDataSet(event, "key_word");
     var title = show.getDataSet(event, "title");
     var url = show.getBannerUrl(type, key_word, title);
+    console.log(url);
     wx.navigateTo({
       url: url
     })

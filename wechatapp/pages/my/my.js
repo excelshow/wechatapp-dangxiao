@@ -14,17 +14,17 @@ Page({
    */
   onLoad: function (options) {
     this._loadData();
-    my.getUserInfo((data)=>{
-      this.setData({
-        userInfo: data
-      });
-    });
   },
 
   _loadData:function(){
     my.getListgrids((data)=>{
       this.setData({
         listgrids: data
+      });
+    });
+    my.getUserInfo((data) => {
+      this.setData({
+        userInfo: data
       });
     });
   },

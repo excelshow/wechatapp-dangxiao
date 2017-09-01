@@ -11,6 +11,11 @@
 
 use think\Route;
 
+// Token
+Route::post("api/:version/token/user","api/:version.Token/getToken");
+Route::post("api/:version/token/app","api/:version.Token/getAppToken");
+Route::post("api/:version/token/verify","api/:version.Token/verifyToken");
+
 Route::get("api/:version/banner/:id","api/:version.Banner/getBanner");
 
 Route::get("api/:version/news/list","api/:version.News/getNewsList");
@@ -18,5 +23,3 @@ Route::get("api/:version/news/:id","api/:version.News/getNewsById");
 
 Route::get("api/:version/user/userinfo","api/:version.User/getUserinfo");
 Route::post("api/:version/address","api/:version.Address/createOrUpdateAddress");
-
-Route::post("api/:version/token/user","api/:version.Token/getToken");

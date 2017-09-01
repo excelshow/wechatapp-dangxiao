@@ -88,22 +88,7 @@ class Base{
       }
     });
   }
-  //获取Banner跳转路径
-  getBannerUrl(type, key_word, title){
-    var url = null;
-    switch (type) {
-      case 1:
-        url = "/pages/news/news-detail/news-detail?id=" + key_word + "&title=" + title;
-        break;
-      case 2:
-        url = "/pages/news/news-list/news-list?id=" + key_word + "&title=" + title;
-        break;
-      case 3:
-        url = key_word;
-        break;
-    }
-    return url;
-  }
+
 }
 
 export { Base };
