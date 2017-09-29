@@ -1,0 +1,19 @@
+<div class="nav-bar">
+  <div class="left-part">
+    <button md-mini-fab id="nav-left-button"><i class="material-icons" style="font-size:18px;">more_vert</i></button>
+    <h4>{{ title }}</h4>
+  </div>
+  <div class="right-part">
+    <div class="right-part" id="nav-right">
+      <button md-icon-button [routerLink]="['/dashboard']"><i class="material-icons icon-btn">dashboard</i></button>
+      <button md-icon-button [mdMenuTriggerFor]="personMenu"><i class="material-icons icon-btn">person</i></button>
+      <md-menu #personMenu="mdMenu">
+        <button md-menu-item (click)="onEditClick()">修改密码</button>
+        <button md-menu-item (click)="outLogin()">退出登录</button>
+      </md-menu>
+    </div>
+    <div id="menu">
+      <button md-icon-button (click)="menuClick()"><i class="material-icons">menu</i></button>
+    </div>
+  </div>
+</div>

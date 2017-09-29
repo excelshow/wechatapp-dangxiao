@@ -8,7 +8,7 @@ class AppToken extends Token
 {
     public function get($ac, $se)
     {
-        $app = ThirdApp::check($ac, $se);
+        $app = ThirdApp::check($ac, md5($se));
         if(!$app)
         {
             throw new TokenException([

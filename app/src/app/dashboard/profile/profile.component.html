@@ -1,0 +1,24 @@
+<form [formGroup]="editPasswordForm" (ngSubmit)="onSubmit(editPasswordForm,$event)">
+  <div class="row">
+    <div class="col-md-12">
+      <md-input-container color="accent">
+        <input mdInput type="password" placeholder="原密码" formControlName="oldPassword">
+      </md-input-container>
+    </div>
+    <div class="col-md-12">
+      <md-input-container color="accent">
+        <input mdInput type="password" placeholder="新密码" formControlName="newPassword">
+      </md-input-container>
+    </div>
+    <div class="col-md-12">
+      <md-input-container color="accent">
+        <input mdInput type="password" placeholder="重复新密码" formControlName="repeat">
+      </md-input-container>
+    </div>
+  </div>
+
+  
+  <div class="row action-btn">
+    <button md-raised-button type="submit" class="btn btn-rose" [disabled]="!editPasswordForm.valid">提交</button>
+  </div>
+</form>

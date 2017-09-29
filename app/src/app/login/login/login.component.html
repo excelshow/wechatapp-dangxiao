@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="background"></div>
+  <div class="container">
+    <div class="row">
+      <app-header></app-header>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+        <div class="card">
+          <div class="card-header">
+            <h4>欢迎登录</h4>
+          </div>
+          <p class="tip"></p>
+
+            <div class="card-form" [formGroup]="form">
+              <div class="form-row">
+                <i class="material-icons">face</i>
+                <md-input-container color="accent">
+                  <input type="text" mdInput placeholder="用户名" formControlName="username"/>
+                </md-input-container>
+              </div>
+              <div class="form-row">
+                <i class="material-icons">lock_outline</i>
+                <md-input-container color="accent">
+                  <input type="password" mdInput placeholder="密码" formControlName="password"/>
+                </md-input-container>
+              </div>
+            </div>
+            
+            <div class="card-footer">
+              <button  md-button [disabled]="!form.valid" (click)="loginBtn($event)">登录</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
