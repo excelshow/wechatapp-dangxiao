@@ -35,20 +35,20 @@ class My extends Base{
           "page": "/pages/user/user"
         }]
       },
-      // {
-      //   "cells__title": "",
-      //   "navigators": [{
-      //     "icon": "/images/icon/bookmark.png",
-      //     "cell__bd": "我的收藏",
-      //     "cell__ft": "",
-      //     "page": ""
-      //   }, {
-      //     "icon": "/images/icon/clock.png",
-      //     "cell__bd": "浏览历史",
-      //     "cell__ft": "",
-      //     "page": ""
-      //   }]
-      // },
+      {
+        "cells__title": "",
+        "navigators": [{
+          "icon": "/images/icon/bookmark.png",
+          "cell__bd": "我的收藏",
+          "cell__ft": "",
+          "page": ""
+        }, {
+          "icon": "/images/icon/clock.png",
+          "cell__bd": "浏览历史",
+          "cell__ft": "",
+          "page": ""
+        }]
+      },
       {
         "cells__title": "",
         "navigators": [{

@@ -3,6 +3,6 @@ class Config{
   }
 }
 
-Config.restUrl = "https://hbbxdx.jizhongzhi.com/api/v1/";
+Config.restUrl = "https://hbbxdx.jizhongzhi.com/index.php/api/v1/";
 
 export { Config };
